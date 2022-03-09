@@ -24,7 +24,7 @@ function event1 (texto) {
     }
     else {
         output.value = " ";
-        output.value = Cifrado(texto);
+        output.value = Cipher(texto);
         output.focus();
     }
 }
@@ -37,7 +37,7 @@ function event2 (texto) {
     }
     else {
         output.value = " ";
-        output.value = Descifrado(texto);
+        output.value = Decoded(texto);
         output.focus();
     }
 }
@@ -46,7 +46,7 @@ function event3 (element) {
     element.execCommand("copy");
 }
 
-function Cifrado(texto) {
+function Cipher(texto) {
     let palabras = texto.split(' ');
     let resultado = [];
     let final = [];
@@ -91,7 +91,7 @@ function Cifrado(texto) {
 return final.join(' ');
 }
 
-function Descifrado (texto) {
+function Decoded(texto) {
     let palabras = texto.split(' ');
     let resultado = [];
     let final = [];
