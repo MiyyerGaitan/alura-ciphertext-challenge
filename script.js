@@ -13,7 +13,7 @@ document.querySelector('#btn-desencriptar').onclick = function () {
 }
 
 document.querySelector('#btn-copy').onclick = function () {
-    event3('#btn-copy');
+    Copytext('msg');
 }
 
 function event1 (texto) {
@@ -110,4 +110,15 @@ function Decoded(texto) {
     final.push(resultado)
     }
 return final.join(' ');
+}
+
+function Copytext(id_elemento) {
+
+    var aux = document.createElement("input");
+    aux.setAttribute("value", document.getElementById(id_elemento).value);
+    document.body.appendChild(aux);
+    aux.select();
+    document.execCommand("copy");
+    document.body.removeChild(aux);
+  
 }
